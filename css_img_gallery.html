@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.gallery{
+        border: 1px solid black;
+    }
+    div.gallery:hover{
+        border: 1px solid #777;
+    }
+    div.gallery img{
+        height: 200px;
+        width: 325px;
+    }
+    div.desc{
+        text-align: center;
+        padding: 15px;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 25%;
+    }
+    @media only screen and (max-width: 700px) {
+     .responsive {
+       width: 50%;
+       margin: 6px 0;
+      }
+    }
+    @media only screen and (max-width: 500px) {
+     .responsive {
+       width: 100%;
+     }
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<body>
+
+     <h1>Responsive Image Gallery </h1>
+
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="file:///C:/Users/DELL/Desktop/guaidence/login.jpg">
+            <img src="file:///C:/Users/DELL/Desktop/guaidence/login.jpg" alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+      
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="file:///C:/Users/DELL/Desktop/guaidence/44b208e04a532e7077071d32baebf666.jpeg">
+            <img src="file:///C:/Users/DELL/Desktop/guaidence/44b208e04a532e7077071d32baebf666.jpeg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="file:///C:/Users/DELL/Desktop/guaidence/bg.jpg">
+            <img src="file:///C:/Users/DELL/Desktop/guaidence/bg.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="file:///C:/Users/DELL/Desktop/guaidence/flowers-276014__340.jpg">
+            <img src="file:///C:/Users/DELL/Desktop/guaidence/flowers-276014__340.jpg" alt="Mountains" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+      
+</body>
+</html>
