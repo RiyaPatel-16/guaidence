@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.r{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
+}
+ @keyframes example{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%   {background-color:rgb(29, 33, 248); left:200px; top:0px;}
+    50%   {background-color:rgb(33, 198, 248); left:200px; top:200px;}
+    75%   {background-color:rgb(16, 251, 91); left:0px; top:200px;}
+    100%   {background-color:rgb(248, 16, 120); left:0px; top:0px;}
+
+}
+
+</style>
+<body>
+    <h1>Animation</h1>
+    <div class="r"></div><br><br><br><br><br><hr>
+
+<style>
+div {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+</style>
+
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div>
+
+</body>
+</html>
+
+
