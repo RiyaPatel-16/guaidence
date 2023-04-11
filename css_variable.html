@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: cadetblue;
+          /* background-color: var(--blue); */
+    }
+    h2{
+        border-bottom: 2px solid darkorange;
+    }
+    .container{
+        color: rgb(73, 130, 15);
+        background-color: rgb(244, 230, 238);
+        padding: 15px;
+    }
+    button{
+        color: black;
+        background-color: cadetblue;
+        /* border: 2px solid black; */
+        padding: 5px;
+        border: 1px solid var(--blue);
+
+    }
+    @media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+    }  
+</style>
+<body>
+    <h1>The Traditional Way</h1>
+
+<div class="container">
+  <h2>Lorem Ipsum</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>
+    <button>Yes</button>
+    <button>No</button>
+  </p>
+</div>
+</body>
+</html>
