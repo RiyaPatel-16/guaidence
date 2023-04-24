@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+const letters = new Set();
+
+const a = "a";
+const b = "b";
+const c = "c";
+
+letters.add(a);
+letters.add(b);
+letters.add(c);
+
+document.getElementById("demo").innerHTML = letters.size;
+</script>
+
+<p id="demo1"></p>
+
+<script>
+const letterss = new Set(["a","b","c"]);
+
+letterss.add("d");
+letterss.add("e");
+
+document.getElementById("demo1").innerHTML = letterss.size;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+const lettersss = new Set(["a","b","c"]);
+
+let text = "";
+for (const x of lettersss.values()) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+<p id="demo3"></p>
+
+<script>
+let y = "5";
+let x = + y;
+document.getElementById("demo3").innerHTML = typeof y + "<br>" + typeof x;
+</script>
+
+<p id="demo4"></p>
+
+<script>
+let i = 123;
+document.getElementById("demo4").innerHTML =
+  i.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+<p id="demo5"></p>
+
+<script>
+    try {
+      adddlert("Welcome guest!");
+    }
+    catch(err) {
+      document.getElementById("demo5").innerHTML = err.message;
+    }
+    </script>  
+
+</body>
+</html>
