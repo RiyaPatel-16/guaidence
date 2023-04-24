@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text = "";
+        for(let i = 0; i <= 5; i++){
+            text += "the number is "+ i + "<br>" ;
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+     <p id="demo1"></p>
+
+    <script>
+       const numbers = [45, 4, 9, 16, 25];
+
+       let txt = "";
+       for (let x in numbers) {
+       txt += numbers[x] + "<br>"; 
+       }
+
+        document.getElementById("demo1").innerHTML = txt;
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+      let textr = "";
+      let i = 0;
+      while (i <= 10) {
+        textr += "<br>The number is " + i;
+        i++;
+      }
+       document.getElementById("demo2").innerHTML = textr;
+    </script>
+
+    <p id="demo3"></p>
+
+   <script>
+      let texti = ""
+      let r = 0;
+
+    do {
+      texti += "<br>The number is " + r;
+      r++;
+    }
+    while (r < 8);  
+
+      document.getElementById("demo3").innerHTML = texti;
+    </script>
+
+   <p id="demo4"></p>
+
+   <script>
+      let texty = "";
+    for (let i = 0; i < 10; i++) {
+        if (i === 3) { break; }
+         texty += "The number is " + i + "<br>";
+        }
+
+       document.getElementById("demo4").innerHTML = texty;
+    </script>
+</body>
+</html>
