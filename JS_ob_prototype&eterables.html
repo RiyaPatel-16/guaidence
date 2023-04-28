@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality + ". The nationality of my mother is " + myMother.nationality;
+</script>
+
+
+<p id="demo2"></p>
+
+<script>
+const letters = ["a","b","c"];
+
+let text = "";
+for (const x of letters) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+<p id="demo3"></p>
+
+<script>
+myNumbers = {};
+
+myNumbers[Symbol.iterator] = function() {
+  let n = 0;
+  done = false;
+  return {
+    next() {
+      n += 10;
+      if (n == 100) {done = true}
+      return {value:n, done:done};
+    }
+  };
+}
+
+let text1 = ""
+for (const num of myNumbers) {
+  text1 += num +"<br>"
+}
+
+document.getElementById("demo3").innerHTML = text1;
+</script>
+</body>
+</html>
