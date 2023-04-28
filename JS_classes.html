@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
+
+document.getElementById("demo").innerHTML =
+myCar1.name + " " + myCar2.name;
+</script>
+
+
+
+<p id="demo1"></p>
+
+<script>
+class Car2 {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;
+  }
+}
+
+const myCar = new Car2("Ford");
+
+document.getElementById("demo1").innerHTML = myCar.cnam;
+</script>
+
+
+<p id="demo2"></p>
+
+<script>
+class Car1 {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "Hello " + x.name;
+  }
+}
+
+const myCars = new Car1("Ford");
+document.getElementById("demo2").innerHTML = Car1.hello(myCars);
+</script>
+</body>
+</html>
