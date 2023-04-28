@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function() {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+let display = person.display.bind(person);
+setTimeout(display, 3000);
+</script>
+
+
+<p id="demo1"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let a = 4;
+  document.getElementById("demo1").innerHTML = a * a;
+}
+</script>
+
+
+<button type="button" onclick="myFunction()">Count!</button>
+
+<p id="demo3">0</p>
+
+<script>
+function add() {
+  let counter = 0;
+  counter += 1;
+  return counter;
+}
+function myFunction(){
+  document.getElementById("demo3").innerHTML = add();
+}
+</script>
+</body>
+</html>
