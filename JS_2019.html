@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+let text1 = "     Hello World!     ";
+let text2 = text1.trimStart();
+
+document.getElementById("demo").innerHTML =
+"Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+</script>
+
+
+<p id="demo1"></p>
+
+<script>
+const fruits = [
+["apples", 300],
+["pears", 900],
+["bananas", 500]
+];
+
+const myObj = Object.fromEntries(fruits);
+document.getElementById("demo1").innerHTML = myObj.apples;
+</script>
+
+<p id="demo2"></p>
+
+<script>
+const myArr = [1, 2, 3, 4, 5,6];
+const newArr = myArr.flatMap((x) => x * 2);
+document.getElementById("demo2").innerHTML = newArr;
+</script>
+
+
+<p id="demo3"></p>
+
+<script>
+let x = 100;
+x &&= 5;
+document.getElementById("demo3").innerHTML = "Value of x is: " + x;
+</script>
+
+
+<p id="demo4"></p>
+
+<script>
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+
+document.getElementById("demo4").innerHTML = text;
+</script>
+
+
+<p id="demo5"></p>
+
+<script>
+const num1 = 1_000_000_000;
+const num2 = 1000000000;
+document.getElementById("demo5").innerHTML = (num1 === num2);
+</script>
+
+</body>
+</html>
