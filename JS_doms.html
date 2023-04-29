@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="frm1" action="/action_page.php">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+      
+<hr>
+
+
+      <img id="image" src="flowers-276014__340.jpg" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "flowers-276014__340.jpg";
+</script>
+
+            <!--                 -->
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Date : " + Date();
+</script>
+
+            <!--               -->
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = " pink";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "larger";
+</script>
+
+<!--             -->
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'blue'">
+Click Me!</button>
+
+<!--              -->
+
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+<!--               -->
+
+<p id="demo1"></p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo1").innerHTML = Date();
+}
+</script>
+
+<!--               -->
+
+<button id="myBtn">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo2").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo2").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo2").innerHTML += "Moused out!<br>";
+}
+</script>
+
+
+<!--              -->
+
+<h3>Remove an HTML Element.</h3>
+
+<div>
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+
+<script>
+function myFunction() {
+document.getElementById("p1").remove();
+}
+</script>
+
+</body>
+</html>
