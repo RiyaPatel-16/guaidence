@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+
+
+<p id="demo1"></p>
+<script>
+
+document.getElementById("demo1").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = 
+"Screen height is " + screen.height;
+</script>
+
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = 
+"Screen color depth is " + screen.colorDepth;
+</script>
+
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+
+<p id="demo4"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo4").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+<br><hr>
+
+
+<input id="id1" type="number" min="100">
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is less than 100 (the input's min attribute), an error message will be displayed.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  if (document.getElementById("id1").validity.rangeUnderflow) {
+    text = "Value too small";
+  } else {
+    text = "Input OK";
+  } 
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
